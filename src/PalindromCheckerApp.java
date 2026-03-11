@@ -9,12 +9,10 @@ public class PalindromCheckerApp {
         System.out.print("Enter a word or number: ");
         String input = sc.nextLine();
 
-        String reversed = "";
+        // Reverse the string using StringBuilder
+        String reversed = new StringBuilder(input).reverse().toString();
 
-        for (int i = input.length() - 1; i >= 0; i--) {
-            reversed = reversed + input.charAt(i);
-        }
-
+        // Check if palindrome
         if (input.equalsIgnoreCase(reversed)) {
             System.out.println("It is a Palindrome.");
         } else {
