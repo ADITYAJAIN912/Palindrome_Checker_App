@@ -9,11 +9,26 @@ public class PalindromCheckerApp {
         System.out.print("Enter a word or number: ");
         String input = sc.nextLine();
 
-        // Reverse the string using StringBuilder
-        String reversed = new StringBuilder(input).reverse().toString();
+        // Convert string to character array
+        char[] chars = input.toCharArray();
 
-        // Check if palindrome
-        if (input.equalsIgnoreCase(reversed)) {
+        boolean isPalindrome = true;
+
+        int start = 0;
+        int end = chars.length - 1;
+
+        // Compare characters from both ends
+        while (start < end) {
+            if (chars[start] != chars[end]) {
+                isPalindrome = false;
+                break;
+            }
+            start++;
+            end--;
+        }
+
+        // Print result
+        if (isPalindrome) {
             System.out.println("It is a Palindrome.");
         } else {
             System.out.println("It is NOT a Palindrome.");
