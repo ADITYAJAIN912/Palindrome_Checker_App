@@ -3,24 +3,9 @@ import java.util.Scanner;
 public class PalindromCheckerApp {
 
     public static void main(String[] args) {
+        System.out.println("Welcome to the palindrome checker management system");
+        System.out.println("Version :1.0");
+        System.out.println("System initialized successfully");
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter a word or number: ");
-        String input = sc.nextLine();
-
-        String reversed = "";
-
-        for (int i = input.length() - 1; i >= 0; i--) {
-            reversed = reversed + input.charAt(i);
-        }
-
-        if (input.equalsIgnoreCase(reversed)) {
-            System.out.println("It is a Palindrome.");
-        } else {
-            System.out.println("It is NOT a Palindrome.");
-        }
-
-        sc.close();
     }
 }
